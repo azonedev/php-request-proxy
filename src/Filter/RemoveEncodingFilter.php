@@ -1,6 +1,6 @@
 <?php
 
-namespace Proxy\Filter;
+namespace Nahid\RequestProxy\Filter;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

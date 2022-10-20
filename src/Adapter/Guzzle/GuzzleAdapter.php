@@ -1,9 +1,9 @@
 <?php
 
-namespace Proxy\Adapter\Guzzle;
+namespace Nahid\RequestProxy\Adapter\Guzzle;
 
 use GuzzleHttp\Client;
-use Proxy\Adapter\AdapterInterface;
+use Nahid\RequestProxy\Adapter\AdapterInterface;
 use Psr\Http\Message\RequestInterface;
 
 class GuzzleAdapter implements AdapterInterface

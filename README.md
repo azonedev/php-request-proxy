@@ -1,6 +1,7 @@
-# PHP Proxy
+# PHP Request Proxy
 
-[![Build Status](http://img.shields.io/travis/jenssegers/php-proxy.svg)](https://travis-ci.org/jenssegers/php-proxy) [![Coverage Status](http://img.shields.io/coveralls/jenssegers/php-proxy.svg)](https://coveralls.io/r/jenssegers/php-proxy?branch=master)
+> This package is forked from `jenssegers/php-proxy` and modified. It is not compatible with the original package. Basically the original package is not maintained anymore thats why I forked it.
+
 
 This is a HTTP/HTTPS proxy script that forwards requests to a different server and returns the response. The Proxy class uses PSR7 request/response objects as input/output, and uses Guzzle to do the actual HTTP request.
 
@@ -9,7 +10,7 @@ This is a HTTP/HTTPS proxy script that forwards requests to a different server a
 Install using composer:
 
 ```
-composer require jenssegers/proxy
+composer require nahid/request-proxy
 ```
 
 ## Example
@@ -17,9 +18,9 @@ composer require jenssegers/proxy
 The following example creates a request object, based on the current browser request, and forwards it to `example.com`. The `RemoveEncodingFilter` removes the encoding headers from the original response so that the current webserver can set these correctly.
 
 ```php
-use Proxy\Proxy;
-use Proxy\Adapter\Guzzle\GuzzleAdapter;
-use Proxy\Filter\RemoveEncodingFilter;
+use Nahid\RequestProxy\Proxy;
+use Nahid\RequestProxy\Adapter\Guzzle\GuzzleAdapter;
+use Nahid\RequestProxy\Filter\RemoveEncodingFilter;
 use Laminas\Diactoros\ServerRequestFactory;
 
 // Create a PSR7 request based on the current browser request.

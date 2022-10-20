@@ -3,8 +3,8 @@
 namespace Proxy;
 
 use PHPUnit\Framework\TestCase;
-use Proxy\Adapter\Dummy\DummyAdapter;
-use Proxy\Exception\UnexpectedValueException;
+use Nahid\RequestProxy\Adapter\Dummy\DummyAdapter;
+use Nahid\RequestProxy\Exception\UnexpectedValueException;
 use Psr\Http\Message\RequestInterface;
 use Laminas\Diactoros\Request;
 use Laminas\Diactoros\Response;

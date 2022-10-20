@@ -1,8 +1,8 @@
 {
-    "name": "jenssegers/proxy",
-    "description": "Proxy library that forwards requests to the desired url and returns the response.",
-    "keywords": ["proxy"],
-    "homepage": "https://github.com/jenssegers/php-proxy",
+    "name": "nahid/request-proxy",
+    "description": "Request proxy library helps you to proxy your request to another server",
+    "keywords": ["proxy", "php", "gateway", "http", "https"],
+    "homepage": "https://github.com/nahid/php-request-proxy",
     "license": "MIT",
     "authors": [
         {
@@ -13,10 +13,14 @@
             "name": "Ota Mares",
             "email": "o.mares@rebuy.de",
             "homepage": "http://www.rebuy.de"
+        },
+        {
+            "name": "Nahid Bin Azhar",
+            "email": "nahid.dns@gmail.com"
         }
     ],
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^5.6 || ^7.0 || ^8.0",
         "psr/http-message": "^1.0",
         "guzzlehttp/guzzle": "^6.0",
         "laminas/laminas-diactoros": "^2.0",
@@ -30,12 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Proxy\\": "src"
+            "Nahid\\RequestProxy\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Proxy\\": "tests"
+            "Nahid\\RequestProxy\\": "tests"
         }
     }
 }

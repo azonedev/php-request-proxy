@@ -1,6 +1,6 @@
 <?php
 
-namespace Proxy\Adapter;
+namespace Nahid\RequestProxy\Adapter;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

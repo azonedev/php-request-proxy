@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response as GuzzleResponse;
 use PHPUnit\Framework\TestCase;
-use Proxy\Adapter\Guzzle\GuzzleAdapter;
+use Nahid\RequestProxy\Adapter\Guzzle\GuzzleAdapter;
 use Psr\Http\Message\ResponseInterface;
 use Laminas\Diactoros\Request;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Proxy\Exception;
+namespace Nahid\RequestProxy\Exception;
 
 class InvalidArgumentException extends \InvalidArgumentException
 {

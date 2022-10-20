@@ -1,8 +1,8 @@
 <?php
 
-namespace Proxy\Adapter\Dummy;
+namespace Nahid\RequestProxy\Adapter\Dummy;
 
-use Proxy\Adapter\AdapterInterface;
+use Nahid\RequestProxy\Adapter\AdapterInterface;
 use Psr\Http\Message\RequestInterface;
 use Laminas\Diactoros\Response;
 

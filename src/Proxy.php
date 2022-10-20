@@ -1,10 +1,10 @@
 <?php
 
-namespace Proxy;
+namespace Nahid\RequestProxy;
 
 use GuzzleHttp\Exception\ClientException;
-use Proxy\Adapter\AdapterInterface;
-use Proxy\Exception\UnexpectedValueException;
+use Nahid\RequestProxy\Adapter\AdapterInterface;
+use Nahid\RequestProxy\Exception\UnexpectedValueException;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Relay\RelayBuilder;
