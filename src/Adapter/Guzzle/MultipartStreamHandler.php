@@ -11,7 +11,7 @@ class MultipartStreamHandler
     public function __invoke(callable $handler)
     {
         return function(RequestInterface $request, array $options) use ($handler){
-            $contentType = $request->getHeader('Content-Type')[0];
+            $contentType = $request->getHeader('Content-Type')[0] ?? 'plain/text';
             if(!preg_match('#^multipart/form-data; boundary=(.*)#',$contentType,$matches)){
                 return $handler($request,$options);
             }
