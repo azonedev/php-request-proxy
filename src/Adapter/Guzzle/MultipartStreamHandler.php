@@ -3,14 +3,15 @@
 namespace Nahid\RequestProxy\Adapter\Guzzle;
 
 use GuzzleHttp\Psr7\MultipartStream;
-use Laminas\Diactoros\UploadedFile;
+use Psr\Http\Message\UploadedFileInterface;
 use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 class MultipartStreamHandler
 {
     public function __invoke(callable $handler)
     {
-        return function(RequestInterface $request, array $options) use ($handler){
+        return function(ServerRequestInterface $request, array $options) use ($handler){
             $contentType = $request->getHeader('Content-Type')[0] ?? 'plain/text';
             if(!preg_match('#^multipart/form-data; boundary=(.*)#',$contentType,$matches)){
                 return $handler($request,$options);
@@ -25,6 +26,7 @@ class MultipartStreamHandler
             $files = $this->files($files, '', []);
 
             $elements = [ ... $files, ... $fields];
+
 
             $multiStream = new MultipartStream($elements,$boundary);
             $request = $request->withBody($multiStream);
@@ -49,7 +51,7 @@ class MultipartStreamHandler
 
             /** @var UploadedFile $file */
 
-            if($file instanceof UploadedFile) {
+            if($file instanceof UploadedFileInterface) {
                 $elements[] = [
                     'name' => $fileName,
                     'contents' => $file->getStream(),
